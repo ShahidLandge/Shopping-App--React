@@ -1,0 +1,93 @@
+.App {
+  text-align: center;
+
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+ul{
+  display: flex;
+  flex-direction: column;
+  
+}
+.nav{
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  padding: 1rem;
+}
+a {
+  margin-right: 1rem;
+  text-decoration: none;
+  color: gray;
+}
+.active {
+  font-weight: bold;
+  color: #fff;
+}
+
+.header{
+  background: #282c34;
+  width: 100%;
+}
+.white{
+  color: #fff;
+}
+
+.filterButton{
+  padding: 0.5rem 1rem;
+  background-color: #61dafb;
+  border: none;
+  border-radius: 0.125rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+
+li{
+  list-style: none;
+}
+label{
+  font-size: large;
+}
+input, button{
+  padding: 0.5rem 1rem;
+  border: 1px solid #D3D3D3;
+  margin: 0.5rem;
+  font-size: large;
+  border-radius: 0.125rem;
+}
+button{
+  cursor: pointer;
+}
+button:active{
+  background-color: #D3D3D3;
+}
+input:focus{
+  outline: none;
+  box-shadow: 0 0 1rem 0.2rem #D3D3D3;
+  background: #fff;
+}
+table,th,td{
+  border:1px solid black;
+
+}
+th,td{
+  padding:15px;
+ 
+}
+table{
+  margin: auto;
+}
+ .navBtn{
+  border: none;
+
+} 
+.primary-button{
+  width: 150px;
+  display: inline-block;
+  }
+  
