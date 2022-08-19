@@ -12,8 +12,6 @@ export const Signup = () => {
     email: "",
     password: "",
     confirmPassword: "",
-
-
   };
 
   const initialErrorValue = {
@@ -123,10 +121,10 @@ export const Signup = () => {
       loggedInuser.setUser(signUpValidation);
       const userList = JSON.parse(localStorage.getItem("users"));
       userList.push(signUpValidation);
-      console.log(userList)
+      console.log(userList);
       localStorage.setItem("users", JSON.stringify(userList));
-    
-      console.log(loggedInuser.user)
+
+      console.log(loggedInuser.user);
       navigate("/");
     }
   };

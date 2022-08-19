@@ -19,7 +19,11 @@ export const Header = () => {
           </li>
           <li>
             <NavLink to="/profile">Profile</NavLink>
+          </li>  
+           <li>
+         <a href="#"> Cart</a>
           </li>
+
 
           {loggedInUser.user.username ? (
             <div className="white">Welcome {loggedInUser.user.username}</div>
