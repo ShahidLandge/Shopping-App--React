@@ -47,7 +47,7 @@ export const Login = () => {
 
   return (
     <>
-      <h2>LogIn</h2>
+      <h2>Login  or  Sign up</h2>
       <form onSubmit={handleSubmit}>
         <br />
         <label htmlFor="username">UserName</label>
@@ -71,15 +71,14 @@ export const Login = () => {
         <br />
         <br />
         <button className="filterButton">Login</button>
+      <button className="filterButton" onClick={() => navigate("/signup")}>Sign up</button>
       </form>
       <br />
       {usernotfound && (
         <>
           <h3>You are not an existing user. please signup first</h3>
           <br />
-          <button className="filterButton" onClick={() => navigate("/signup")}>
-            Signup
-          </button>
+      
         </>
       )}
       {passwordNotMatch && (

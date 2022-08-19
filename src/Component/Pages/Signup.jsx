@@ -136,7 +136,7 @@ export const Signup = () => {
 
   return (
     <>
-      <h2>Sign-Up</h2>
+      <h2>Sign up</h2>
       <br />
       <br />
 
