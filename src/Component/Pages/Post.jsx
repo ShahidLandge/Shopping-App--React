@@ -4,12 +4,12 @@ import { Loader } from "../Loader/Loader";
 
 export const Post = () => {
   const [post, setPost] = useState({});
-  const [loading, setLoading] = useState(false);
+  const[loading ,setLoading] = useState(false)
   const params = useParams();
   console.log(params);
   useEffect(() => {
     try {
-      setLoading(true);
+      setLoading(true)
       fetch(`https://jsonplaceholder.typicode.com/posts/${params.postId}`)
         .then((res) => {
           return res.json();
@@ -17,10 +17,10 @@ export const Post = () => {
         .then((data) => {
           console.log(data);
           setPost(data);
-          setLoading(false);
+          setLoading(false)
         })
         .catch((e) => {
-          setLoading(false);
+          setLoading(false)
           console.log(e.message);
         });
     } catch (e) {
@@ -32,20 +32,18 @@ export const Post = () => {
     <>
       <h2>Post {post.id} Data</h2>
       <br />
-      {loading ? (
-        <Loader />
-      ) : (
-        <table>
-          <tbody>
-            <tr>
-              <td>Post: {post.id}</td>
-              <td>User Id: {post.userId}</td>
-              <td>Title: {post.title}</td>
-              <td>Body: {post.body}</td>
-            </tr>
-          </tbody>
-        </table>
-      )}
+      {
+     loading? <Loader/>: <table>
+        <tbody>
+          <tr>
+            <td>Post: {post.id}</td>
+            <td>User Id: {post.userId}</td>
+            <td>Title: {post.title}</td>
+            <td>Body: {post.body}</td>
+          </tr>
+        </tbody>
+      </table>
+}
     </>
   );
 };

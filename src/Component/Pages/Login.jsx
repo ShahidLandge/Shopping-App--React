@@ -11,12 +11,13 @@ export const Login = () => {
   const [userInfo, setUserName] = useState({
     username: "",
     password: "",
+  
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const userList = JSON.parse(localStorage.getItem("users"));
-    console.log(userList);
+    console.log(userList)
     const userfromStorage = userList.find((user) => {
       return user.firstname === userInfo.username;
     });
@@ -27,12 +28,13 @@ export const Login = () => {
     //     path = '/'
     // }
     // console.log(loggedInuser.user)
-    console.log(userfromStorage);
+    console.log(userfromStorage)
     if (userfromStorage) {
       if (userfromStorage.password === userInfo.password) {
+     
         loggedInuser.setUser(userInfo);
         // console.log(loggedInuser.user.userInfo)
-        console.log(location);
+        console.log(location)
         navigate(location.state?.previousPath || "/");
         // navigate(path)
       } else {
@@ -45,7 +47,7 @@ export const Login = () => {
 
   return (
     <>
-      <h2>Login or Sign up</h2>
+      <h2>Login  or  Sign up</h2>
       <form onSubmit={handleSubmit}>
         <br />
         <label htmlFor="username">UserName</label>
@@ -68,16 +70,15 @@ export const Login = () => {
         />
         <br />
         <br />
-        <button className="filterButton">Login</button>
-        <button className="filterButton" onClick={() => navigate("/signup")}>
-          Sign up
-        </button>
+        <button className="filterButton">Login</button>             
+        <button className="filterButton" onClick={() => navigate("/signup")}>Sign up</button>
       </form>
       <br />
       {usernotfound && (
         <>
           <h3>You are not an existing user. please signup first</h3>
           <br />
+      
         </>
       )}
       {passwordNotMatch && (

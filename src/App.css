@@ -1,8 +1,10 @@
 .App {
   text-align: center;
+
 }
 
-* {
+
+*{
   margin: 0;
   padding: 0;
 }
@@ -14,10 +16,11 @@
   padding: 1rem;
   
 } */
-.nav {
+
+.nav{
+  margin: 1rem;
   display: flex;
   flex-direction: row;
-  margin: 1rem;
   padding: 1rem;
 }
 a {
@@ -30,15 +33,15 @@ a.active {
   color: #fff;
 }
 
-.header {
+.header{
   background: #282c34;
   width: 100%;
 }
-.white {
+.white{
   color: #fff;
 }
 
-.filterButton {
+.filterButton{
   padding: 0.5rem 1rem;
   background-color: #61dafb;
   border: none;
@@ -47,48 +50,48 @@ a.active {
   margin-bottom: 1rem;
 }
 
-li {
+li{
   list-style: none;
 }
-label {
+label{
   font-size: large;
 }
-input,
-button {
+input, button{
   padding: 0.5rem 1rem;
-  border: 1px solid #d3d3d3;
+  border: 1px solid #D3D3D3;
   margin: 0.5rem;
   font-size: large;
   border-radius: 0.125rem;
 }
-button {
+button{
   cursor: pointer;
 }
-button:active {
-  background-color: #d3d3d3;
+button:active{
+  background-color: #D3D3D3;
 }
-input:focus {
+input:focus{
   outline: none;
-  box-shadow: 0 0 1rem 0.2rem #d3d3d3;
+  box-shadow: 0 0 1rem 0.2rem #D3D3D3;
   background: #fff;
 }
-table,
-th,
-td {
-  border: 1px solid black;
+table,th,td{
+  border:1px solid black;
+
 }
-th,
-td {
-  padding: 15px;
+th,td{
+  padding:15px;
+ 
 }
-table {
+table{
   margin: auto;
   width: 80%;
 }
-.navBtn {
+ .navBtn{
   border: none;
-}
-.primary-button {
+
+} 
+.primary-button{
   width: 150px;
   display: inline-block;
-}
+  }
+  

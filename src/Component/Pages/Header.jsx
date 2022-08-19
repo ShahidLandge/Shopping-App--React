@@ -19,11 +19,10 @@ export const Header = () => {
           </li>
           <li>
             <NavLink to="/profile">Profile</NavLink>
-          </li>  
-           <li>
+          </li>
+          <li>
          <a href="#"> Cart</a>
           </li>
-
 
           {loggedInUser.user.username ? (
             <div className="white">Welcome {loggedInUser.user.username}</div>
@@ -33,7 +32,8 @@ export const Header = () => {
             </li>
           )}
         </ul>
-      </header>
+        
+        </header>
     </>
   );
 };

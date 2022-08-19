@@ -6,7 +6,7 @@ import { Loader } from "../Loader/Loader";
 export const Home = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [inputId, setInputId] = useState("");
+  const [inputId, setInputId] = useState('');
   const [buttonId, setButtonId] = useState(0);
 
   const navigate = useNavigate();
@@ -24,10 +24,9 @@ export const Home = () => {
             console.log(data);
             setPosts([data]);
             setLoading(false);
-          })
-          .catch((e) => {
+          }).catch((e)=>{
             setLoading(false);
-            console.log(e.message);
+            console.log(e.message)
           })
       : fetch(`https://jsonplaceholder.typicode.com/todos`)
           .then((response) => response.json())
@@ -35,13 +34,12 @@ export const Home = () => {
             console.log(data);
             setPosts(data);
             setLoading(false);
-          })
-          .catch((e) => {
+          }).catch((e)=>{
             setLoading(false);
-            console.log(e.message);
-          });
+            console.log(e.message)
+          })
   }, [buttonId]);
-  const completedButton = () => {
+    const completedButton = () => {
     let filter = posts.filter((item) => {
       return item.completed;
     });
@@ -62,17 +60,11 @@ export const Home = () => {
         type="number"
         placeholder="Enter Post Id"
         value={inputId}
-        onChange={(e) => setInputId(e.target.value)}
-      />
-      <button onClick={() => handleClick()} className="filterButton">
-        Fetch Post
-      </button>
-      <button onClick={() => completedButton()} className="filterButton">
-        Completed
-      </button>
-      <button onClick={() => notCompletedButton()} className="filterButton">
-        Not Completed
-      </button>
+        onChange={(e) => setInputId(e.target.value)}/>
+      <button onClick={() => handleClick()} className="filterButton">Fetch Post</button>
+    
+      <button onClick={() => completedButton()} className="filterButton">Completed</button>
+      <button onClick={() => notCompletedButton()} className="filterButton">Not Completed</button>
       <br />
       <br />
       {loading ? (
@@ -81,18 +73,10 @@ export const Home = () => {
         <>
           <table>
             <thead>
-              <th>
-                <h3>User Id</h3>
-              </th>
-              <th>
-                <h3>Id</h3>
-              </th>
-              <th>
-                <h3>Title</h3>
-              </th>
-              <th>
-                <h3>Completed</h3>
-              </th>
+              <th><h3>User Id</h3></th>
+              <th><h3>Id</h3></th>
+              <th><h3>Title</h3></th>
+              <th><h3>Completed</h3></th>
             </thead>
 
             {posts.map((item) => {

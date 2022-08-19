@@ -1,9 +1,9 @@
-table,
-th,
-td {
+table ,th ,td{
   border: 1px solid black;
+
 }
-table {
+
+table{
   margin: auto;
   width: 80%;
 }
