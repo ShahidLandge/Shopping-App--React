@@ -3,13 +3,7 @@ import { Loader } from "../Loader/Loader";
 
 import Style from "./Products.module.css";
 
-// function getTodos() {
-//   const storedData = localStorage.getItem("users");
-//   console.log(storedData);
-//   if (!storedData) {
-//     return [];
-//   } else return JSON.parse(storedData);
-// }
+
 
 export const Products = () => {
  
@@ -87,7 +81,7 @@ export const Products = () => {
           <tbody key={ele.id}>
             <tr>
               <td> {ele.id}</td>
-              <td> {ele.title}</td>
+              <td><h3> {ele.title} </h3></td>
              <td> <img src={ele.image} alt='pic not found' width='100px'/></td>
               <td> $ {ele.price}</td>
               </tr>
