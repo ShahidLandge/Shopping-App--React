@@ -82,8 +82,9 @@ export const Products = () => {
             <tr>
               <td> {ele.id}</td>
               <td><h3> {ele.title} </h3></td>
-             <td> <img src={ele.image} alt='pic not found' width='100px'/></td>
+              <td> <img src={ele.image} alt='pic not found' width='100px'/></td>
               <td> $ {ele.price}</td>
+              <td><button  className="filterButton">Add to Cart</button></td>
               </tr>
             </tbody>
         )
