@@ -12,8 +12,6 @@ export const Signup = () => {
     email: "",
     password: "",
     confirmPassword: "",
-
-
   };
 
   const initialErrorValue = {
@@ -123,10 +121,10 @@ export const Signup = () => {
       loggedInuser.setUser(signUpValidation);
       const userList = JSON.parse(localStorage.getItem("users"));
       userList.push(signUpValidation);
-      console.log(userList)
+      console.log(userList);
       localStorage.setItem("users", JSON.stringify(userList));
-    
-      console.log(loggedInuser.user)
+
+      console.log(loggedInuser.user);
       navigate("/");
     }
   };
@@ -140,63 +138,70 @@ export const Signup = () => {
       <br />
       <br />
 
-      <form onSubmit={submitHandler}>
-        <label htmlFor="firstname">First Name: </label>
-        <input
-          type="text"
-          id="firstname"
-          value={signUpValidation.firstname}
-          onChange={(e) => handleUserInputChange(e)}
-        />
-
-        <div>{signUpValidationerror.firstnameError}</div>
-        <br />
-        <label htmlFor="lastname">Last Name: </label>
-        <input
-          type="text"
-          id="lastname"
-          value={signUpValidation.lastname}
-          onChange={(e) => handleUserInputChange(e)}
-        />
-
-        <div>{signUpValidationerror.lastnameError}</div>
+      <form className="form" onSubmit={submitHandler}>
+        <div>
+          <input
+            type="text"
+            id="firstname"
+            placeholder="First Name"
+            value={signUpValidation.firstname}
+            onChange={(e) => handleUserInputChange(e)}
+          />
+          <div>{signUpValidationerror.firstnameError}</div>
+        </div>
         <br />
 
-        <label htmlFor="email">Email: </label>
-        <input
-          type="text"
-          id="email"
-          value={signUpValidation.email}
-          onChange={(e) => handleUserInputChange(e)}
-        />
-
-        <div>{signUpValidationerror.emailError}</div>
+        <div>
+          <input
+            type="text"
+            id="lastname"
+            placeholder="Last Name"
+            value={signUpValidation.lastname}
+            onChange={(e) => handleUserInputChange(e)}
+          />
+          <div>{signUpValidationerror.lastnameError}</div>
+        </div>
         <br />
 
-        <label htmlFor="password">Password: </label>
-        <input
-          type="text"
-          id="password"
-          value={signUpValidation.password}
-          onChange={(e) => handleUserInputChange(e)}
-        />
-
-        <div>{signUpValidationerror.passwordError}</div>
+        <div>
+          <input
+            type="text"
+            id="email"
+            placeholder="Email Id"
+            value={signUpValidation.email}
+            onChange={(e) => handleUserInputChange(e)}
+          />
+          <div>{signUpValidationerror.emailError}</div>
+        </div>
         <br />
 
-        <label htmlFor="confirmPassword">Confirm Password: </label>
-        <input
-          type="text"
-          id="confirmPassword"
-          value={signUpValidation.confirmPassword}
-          onChange={(e) => handleUserInputChange(e)}
-        />
-
-        <div>{signUpValidationerror.confirmPasswordError}</div>
+        <div>
+          <input
+            type="text"
+            id="password"
+            placeholder="Password"
+            value={signUpValidation.password}
+            onChange={(e) => handleUserInputChange(e)}
+          />
+          <div>{signUpValidationerror.passwordError}</div>
+        </div>
         <br />
 
-        <button className="filterButton">Sign up</button>
+        <div>
+          <input
+            type="text"
+            id="confirmPassword"
+            placeholder="Confirm Password"
+            value={signUpValidation.confirmPassword}
+            onChange={(e) => handleUserInputChange(e)}
+          />
+          <div>{signUpValidationerror.confirmPasswordError}</div>
+        </div>
+        <br />
+
+        <button className="filterButton primary-button">Sign up</button>
       </form>
     </>
   );
 };
+
