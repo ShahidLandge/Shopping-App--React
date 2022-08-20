@@ -21,7 +21,7 @@ export const Header = () => {
             <NavLink to="/profile">Profile</NavLink>
           </li>
           <li>
-         <a href="#"> Cart</a>
+            <a href="#"> Cart</a>
           </li>
 
           {loggedInUser.user.username ? (
@@ -32,8 +32,7 @@ export const Header = () => {
             </li>
           )}
         </ul>
-        
-        </header>
+      </header>
     </>
   );
 };

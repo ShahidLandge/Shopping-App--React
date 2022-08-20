@@ -6,9 +6,8 @@ import { Loader } from "../Loader/Loader";
 export const Home = () => {
   const [posts, setPosts] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [inputId, setInputId] = useState('');
+  const [inputId, setInputId] = useState("");
   const [buttonId, setButtonId] = useState(0);
-
   const navigate = useNavigate();
   const handleClick = () => {
     setButtonId(inputId);
@@ -24,9 +23,10 @@ export const Home = () => {
             console.log(data);
             setPosts([data]);
             setLoading(false);
-          }).catch((e)=>{
+          })
+          .catch((e) => {
             setLoading(false);
-            console.log(e.message)
+            console.log(e.message);
           })
       : fetch(`https://jsonplaceholder.typicode.com/todos`)
           .then((response) => response.json())
@@ -34,12 +34,13 @@ export const Home = () => {
             console.log(data);
             setPosts(data);
             setLoading(false);
-          }).catch((e)=>{
-            setLoading(false);
-            console.log(e.message)
           })
+          .catch((e) => {
+            setLoading(false);
+            console.log(e.message);
+          });
   }, [buttonId]);
-    const completedButton = () => {
+  const completedButton = () => {
     let filter = posts.filter((item) => {
       return item.completed;
     });
@@ -60,53 +61,70 @@ export const Home = () => {
         type="number"
         placeholder="Enter Post Id"
         value={inputId}
-        onChange={(e) => setInputId(e.target.value)}/>
-      <button onClick={() => handleClick()} className="filterButton">Fetch Post</button>
-    
-      <button onClick={() => completedButton()} className="filterButton">Completed</button>
-      <button onClick={() => notCompletedButton()} className="filterButton">Not Completed</button>
+        onChange={(e) => setInputId(e.target.value)}
+      />
+      <button onClick={() => handleClick()} className="filterButton">
+        Fetch Post
+      </button>
+
+      <button onClick={() => completedButton()} className="filterButton">
+        Completed
+      </button>
+      <button onClick={() => notCompletedButton()} className="filterButton">
+        Not Completed
+      </button>
       <br />
       <br />
       {loading ? (
         <Loader />
       ) : (
         <>
-          <table>
-            <thead>
-              <th><h3>User Id</h3></th>
-              <th><h3>Id</h3></th>
-              <th><h3>Title</h3></th>
-              <th><h3>Completed</h3></th>
-            </thead>
+          <div className="mytable">
+            <table>
+              <thead>
+                <th>
+                  <h3>User Id</h3>
+                </th>
+                <th>
+                  <h3>Id</h3>
+                </th>
+                <th>
+                  <h3>Title</h3>
+                </th>
+                <th>
+                  <h3>Completed</h3>
+                </th>
+              </thead>
 
-            {posts.map((item) => {
-              return (
-                <tbody key={item.id}>
-                  <tr>
-                    <td>{item.userId}</td>
-                    <td>{item.id}</td>
-                    <td>
-                      <button
-                        className="navBtn"
-                        onClick={() => navigate(`${item.id}`)}
-                      >
-                        {item.title}
-                      </button>
-                    </td>
-                    {item.completed ? (
+              {posts.map((item) => {
+                return (
+                  <tbody key={item.id}>
+                    <tr>
+                      <td>{item.userId}</td>
+                      <td>{item.id}</td>
                       <td>
-                        <FaCheck />
+                        <button
+                          className="navBtn"
+                          onClick={() => navigate(`${item.id}`)}
+                        >
+                          {item.title}
+                        </button>
                       </td>
-                    ) : (
-                      <td>
-                        <FaWindowClose />{" "}
-                      </td>
-                    )}
-                  </tr>
-                </tbody>
-              );
-            })}
-          </table>
+                      {item.completed ? (
+                        <td>
+                          <FaCheck />
+                        </td>
+                      ) : (
+                        <td>
+                          <FaWindowClose />{" "}
+                        </td>
+                      )}
+                    </tr>
+                  </tbody>
+                );
+              })}
+            </table>
+          </div>
         </>
       )}
     </>

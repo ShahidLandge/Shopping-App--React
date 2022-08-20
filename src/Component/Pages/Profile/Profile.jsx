@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Outlet, useNavigate, Link } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import { UserContext } from "../../../AuthContext";
 
 export const Profile = () => {
