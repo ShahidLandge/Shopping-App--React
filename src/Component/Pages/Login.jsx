@@ -11,13 +11,12 @@ export const Login = () => {
   const [userInfo, setUserName] = useState({
     username: "",
     password: "",
-  
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
     const userList = JSON.parse(localStorage.getItem("users"));
-    console.log(userList)
+    console.log(userList);
     const userfromStorage = userList.find((user) => {
       return user.firstname === userInfo.username;
     });
@@ -28,13 +27,12 @@ export const Login = () => {
     //     path = '/'
     // }
     // console.log(loggedInuser.user)
-    console.log(userfromStorage)
+    console.log(userfromStorage);
     if (userfromStorage) {
       if (userfromStorage.password === userInfo.password) {
-     
         loggedInuser.setUser(userInfo);
         // console.log(loggedInuser.user.userInfo)
-        console.log(location)
+        console.log(location);
         navigate(location.state?.previousPath || "/");
         // navigate(path)
       } else {
@@ -47,38 +45,46 @@ export const Login = () => {
 
   return (
     <>
-      <h2>Login  or  Sign up</h2>
-      <form onSubmit={handleSubmit}>
-        <br />
-        <label htmlFor="username">UserName</label>
-        <input
-          id="username"
-          type="text"
-          onChange={(e) =>
-            setUserName({ ...userInfo, username: e.target.value })
-          }
-        />
+      <h2>Login or Sign up</h2>
+      <form className="form" onSubmit={handleSubmit}>
         <br />
         <br />
-        <label htmlFor="password">Password</label>
-        <input
-          id="password"
-          type="text"
-          onChange={(e) =>
-            setUserName({ ...userInfo, password: e.target.value })
-          }
-        />
+        <div>
+          <input
+            id="username"
+            type="text"
+            placeholder="Username"
+            onChange={(e) =>
+              setUserName({ ...userInfo, username: e.target.value })
+            }
+          />
+        </div>
+        <br />
+        <div>
+          <input
+            id="password"
+            type="text"
+            placeholder="Password"
+            onChange={(e) =>
+              setUserName({ ...userInfo, password: e.target.value })
+            }
+          />
+        </div>
         <br />
         <br />
-        <button className="filterButton">Login</button>             
-        <button className="filterButton" onClick={() => navigate("/signup")}>Sign up</button>
+        <button className="filterButton primary-button">Login</button>
+        <button
+          className="filterButton primary-button"
+          onClick={() => navigate("/signup")}
+        >
+          Sign up
+        </button>
       </form>
       <br />
       {usernotfound && (
         <>
           <h3>You are not an existing user. please signup first</h3>
           <br />
-      
         </>
       )}
       {passwordNotMatch && (
@@ -89,3 +95,4 @@ export const Login = () => {
     </>
   );
 };
+
