@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import "./App.css";
 import { Home } from "./Component/Pages/Home";
 import { Routes, Route } from "react-router-dom";
@@ -13,6 +14,22 @@ import { RequireLogin } from "./Component/Pages/RequireLogin";
 import { useEffect } from "react";
 import React from "react";
 import Cart from "./Component/Pages/Cart";
+=======
+import './App.css';
+import { Home } from './Component/Pages/Home';
+import { Routes, Route } from 'react-router-dom'
+import {Products } from './Component/Pages/Products';
+import { Profile } from './Component/Pages/Profile/Profile';
+import { Header } from './Component/Pages/Header';
+import { Post } from './Component/Pages/Post';
+import {  MyOrders } from './Component/Pages/Profile/MyOrders';
+import { Login } from './Component/Pages/Login';
+import { Signup } from './Component/Pages/Signup';
+import { AuthContext } from './AuthContext';
+import { RequireLogin } from './Component/Pages/RequireLogin';
+import { useEffect } from 'react';
+import React from 'react';
+>>>>>>> 2a63db37310a5112ac97ddb778f13c5a7a58cc81
 
 function App() {
   useEffect(() => {

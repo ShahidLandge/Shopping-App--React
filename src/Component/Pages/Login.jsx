@@ -45,7 +45,11 @@ export const Login = () => {
 
   return (
     <>
+<<<<<<< HEAD
       <h2  className="formHeader">Login or Sign up</h2>
+=======
+      <h2>Login or Sign up</h2>
+>>>>>>> 2a63db37310a5112ac97ddb778f13c5a7a58cc81
       <form className="form" onSubmit={handleSubmit}>
         <br />
         <br />
@@ -95,3 +99,4 @@ export const Login = () => {
     </>
   );
 };
+

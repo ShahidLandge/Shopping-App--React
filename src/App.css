@@ -7,6 +7,7 @@
   padding: 0;
 }
 
+<<<<<<< HEAD
 /* css for background image */
 .bg {
   /* Set up proportionate scaling */
@@ -35,6 +36,11 @@
 /* css for navbar */
 .nav {
   /* margin-bottom: 1rem; */
+=======
+/*css for header or a navbar*/
+.nav {
+  margin-bottom: 1rem;
+>>>>>>> 2a63db37310a5112ac97ddb778f13c5a7a58cc81
   display: flex;
   flex-direction: row;
   padding: 1rem;
@@ -91,6 +97,7 @@ input:focus {
   box-shadow: 0 0 1rem 0.2rem #d3d3d3;
   background: #fff;
 }
+<<<<<<< HEAD
 
 .navBtn {
   border: none;
@@ -111,6 +118,18 @@ table{
   margin: auto;
   width: 80%;
 } */
+=======
+
+.navBtn {
+  border: none;
+}
+.primary-button {
+  width: 150px;
+  display: inline-block;
+}
+
+/*css for table */
+>>>>>>> 2a63db37310a5112ac97ddb778f13c5a7a58cc81
 table {
   border: 1px solid #ccc;
   border-collapse: collapse;
@@ -145,6 +164,7 @@ th {
   flex-direction: column;
   align-items: center;
 }
+<<<<<<< HEAD
 .formHeader {
   margin-top: 1rem;
 }
@@ -167,6 +187,14 @@ th {
   th {
     font-size: 0.6rem;
   }
+=======
+
+@media screen and (max-width: 500px) {
+  td,
+  th {
+    font-size: 0.6rem;
+  }
+>>>>>>> 2a63db37310a5112ac97ddb778f13c5a7a58cc81
   img {
     width: 60px;
   }
@@ -183,8 +211,14 @@ th {
     height: 70px;
     padding: 0.625em;
   }
+<<<<<<< HEAD
   .btn {
     font-size: 0.6rem;
     width: 60px;
   }
 }
+=======
+}
+
+  
+>>>>>>> 2a63db37310a5112ac97ddb778f13c5a7a58cc81
