@@ -7,16 +7,34 @@
   padding: 0;
 }
 
-/* ul{
+/* css for background image */
+.bg {
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 1400px 700px;
+  background-attachment: fixed;
+}
+.homeBtns {
   display: flex;
-  flex-direction: row;
-  margin: 1rem;
-  padding: 1rem;
-  
-} */
-
-.nav {
+  flex-direction: column;
+  justify-content: end;
+  align-items: end;
+}
+.btn {
+  padding: 0.5rem 1rem;
+  background-color: cyan;
+  box-shadow: 0.2rem 0.2rem #d3d3d3;
+  border: none;
+  border-radius: 0.35rem;
+  cursor: pointer;
   margin-bottom: 1rem;
+}
+
+/* css for navbar */
+.nav {
+  /* margin-bottom: 1rem; */
   display: flex;
   flex-direction: row;
   padding: 1rem;
@@ -43,7 +61,7 @@ a.active {
   padding: 0.5rem 1rem;
   background-color: #61dafb;
   border: none;
-  border-radius: 0.125rem;
+  border-radius: 0.35rem;
   cursor: pointer;
   margin-bottom: 1rem;
 }
@@ -127,7 +145,23 @@ th {
   flex-direction: column;
   align-items: center;
 }
+.formHeader {
+  margin-top: 1rem;
+}
 
+@media screen and (max-width: 1200px) {
+  .bg {
+    /* width: 100%;
+  height: 100vh; */
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    background-attachment: fixed;
+  }
+  .btn {
+    font-size: 0.7rem;
+    width: 80px;
+  }
+}
 @media screen and (max-width: 500px) {
   td,
   th {
@@ -148,5 +182,9 @@ th {
     width: 70px;
     height: 70px;
     padding: 0.625em;
+  }
+  .btn {
+    font-size: 0.6rem;
+    width: 60px;
   }
 }

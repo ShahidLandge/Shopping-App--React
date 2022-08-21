@@ -21,7 +21,7 @@ export const Header = () => {
             <NavLink to="/profile">Profile</NavLink>
           </li>
           <li>
-            <a href="#"> Cart</a>
+          <NavLink to="/cart">Cart</NavLink>
           </li>
 
           {loggedInUser.user.username ? (

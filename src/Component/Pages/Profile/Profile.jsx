@@ -11,7 +11,6 @@ export const Profile = () => {
   };
   return (
     <>
-      <h2>Profile Page</h2>
       <br />
       <h3>Name: {loggedInUser.user.username}</h3>
       <br />
@@ -46,9 +45,17 @@ export const Profile = () => {
 
       <button
         className="filterButton primary-button"
+        onClick={() => navigate("/cart")}
+      >
+        Go to Cart
+      </button>
+      <br />
+
+      <button
+        className="filterButton primary-button"
         onClick={() => navigate("/products")}
       >
-        Products
+        Go to Products
       </button>
       <br />
 
