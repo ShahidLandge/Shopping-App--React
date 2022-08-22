@@ -57,7 +57,7 @@ export const Products = () => {
 
   return (
     <div className="App">
-      <h2>Buy Now</h2>
+      <h2 className="heading">Buy Now</h2>
       <br />
       <input
         placeholder="Search Product"
