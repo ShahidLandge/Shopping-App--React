@@ -64,7 +64,7 @@ export const Products = () => {
         onChange={(e) => setinputChange(e.target.value)}
       />
       <button className="filterButton" onClick={() => searchProduct()}>
-        Fetch{" "}
+       Search
       </button>
       <button className="filterButton" onClick={() => lowToHigh()}>
         Low-to-High Price{" "}
