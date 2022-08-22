@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
-<<<<<<< HEAD
 import { useNavigate } from "react-router-dom";
-=======
->>>>>>> 2a63db37310a5112ac97ddb778f13c5a7a58cc81
 import { Loader } from "../Loader/Loader";
 
 export const Products = () => {
@@ -12,10 +9,7 @@ export const Products = () => {
   let [post, setpost] = useState([]);
   const [inputchange, setinputChange] = useState("");
   const [loading, setLoading] = useState(false);
-<<<<<<< HEAD
   const navigate = useNavigate();
-=======
->>>>>>> 2a63db37310a5112ac97ddb778f13c5a7a58cc81
 
   //search bar . searching while user types in search bar.
   post = !inputchange
@@ -119,14 +113,10 @@ export const Products = () => {
                   </td>
                   <td> $ {ele.price}</td>
                   <td>
-<<<<<<< HEAD
                     <button
                       className="filterButton btnCart"
                       onClick={() => navigate("/cart")}
                     >
-=======
-                    <button className="filterButton btnCart">
->>>>>>> 2a63db37310a5112ac97ddb778f13c5a7a58cc81
                       Add to Cart
                     </button>
                   </td>
