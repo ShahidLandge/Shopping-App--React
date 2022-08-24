@@ -10,9 +10,11 @@ export const Home = () => {
     <>
       <div className="bg" style={{ backgroundImage: `url(${image})` }}>
         <div className="homeBtns">
-          <br/>
+          <br />
           {loggedInUser.user.username ? (
-            <h3  className="btn primary-button">Welcome {loggedInUser.user.username} Enjoy Shopping</h3>
+            <h3 className="btn primary-button">
+              Hello {loggedInUser.user.username} Enjoy Shopping
+            </h3>
           ) : (
             <button
               className="btn primary-button"
