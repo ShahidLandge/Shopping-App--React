@@ -51,8 +51,15 @@ a.active {
 }
 
 .header {
-  background: #282c34;
+  background: #0e0f11;
   width: 100%;
+  /* navbar fixed to top when scrolled 
+  position: sticky;
+  top: 0px; */
+}
+.alert {
+  position: sticky;
+  top: 0px;
 }
 .white {
   color: #fff;
@@ -159,17 +166,13 @@ th {
   }
 }
 @media screen and (max-width: 500px) {
-  td,
-  th {
-    font-size: 0.6rem;
-  }
   img {
     width: 60px;
   }
   .btnCart {
-    font-size: 0.5rem;
-    width: 40px;
-    height: 40px;
+    font-size: 0.6rem;
+    width: 3rem;
+    height: 3rem;
     padding: 0.625em;
     background-color: #61dafb;
   }
@@ -182,5 +185,8 @@ th {
   .btn {
     font-size: 0.6rem;
     width: 60px;
+  }
+  .itemTitle {
+    font-size: 0.8rem;
   }
 }
