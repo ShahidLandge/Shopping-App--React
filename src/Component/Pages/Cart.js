@@ -9,9 +9,9 @@ export const Cart = () => {
   console.log(cart[0]);
 
   //Delete item from cart
-  const handleDelete = (ele) => {
-    const filter = cart.filter((item) => {
-      return ele[0].id !== item[0].id;
+  const handleDelete = (ele, index) => {
+    const filter = cart.filter((item, idx) => {
+      return index !== idx;
     });
     console.log(filter);
     setCart(filter);
@@ -24,11 +24,15 @@ export const Cart = () => {
     return acc;
   }, 0);
 
+  // clear cart
+  const clearCart = () => {
+    setCart([]);
+  };
+
   return (
     <>
       <br />
-      <h2>My Cart</h2>
-      <br />
+      <h3>My Cart</h3>
 
       {cart.length !== 0 ? (
         <>
@@ -42,19 +46,24 @@ export const Cart = () => {
             <thead>
               <tr>
                 <th>
-                  <h3>Serial NO. </h3>{" "}
+                  <h6>Sr No. </h6>
                 </th>
                 <th>
-                  <h3>Title</h3>
+                  <h6>Title</h6>
                 </th>
                 <th>
-                  <h3>Image</h3>
+                  <h6>Image</h6>
                 </th>
                 <th>
-                  <h3>Price</h3>
+                  <h6>Price</h6>
                 </th>
                 <th>
-                  <h3>Remove</h3>
+                  <button
+                    className="filterButton btnCart"
+                    onClick={() => clearCart()}
+                  >
+                    Clear Cart
+                  </button>
                 </th>
               </tr>
             </thead>
@@ -64,9 +73,7 @@ export const Cart = () => {
                   <tr>
                     <td> {index + 1}</td>
 
-                    <td>
-                      <h4> {ele[0].title}</h4>
-                    </td>
+                    <td className="itemTitle">{ele[0].title}</td>
                     <td>
                       <img
                         src={ele[0].image}
@@ -78,8 +85,8 @@ export const Cart = () => {
                     <td>
                       {" "}
                       <button
-                        className="filterButton"
-                        onClick={(event) => handleDelete(ele)}
+                        className="filterButton btnCart"
+                        onClick={(event) => handleDelete(ele, index)}
                       >
                         Remove
                       </button>
