@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Loader } from "../Loader/Loader";
 import { CartContext } from "./CartContext";
 
-export const Products = () => {
+export const Products = (props) => {
   // 1. Make an api call to the url: "https://fakestoreapi.com/products" to fetch a list of products
   // 2. Render the products (name,image and price)
 
@@ -12,6 +12,7 @@ export const Products = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const [cart, setCart] = useContext(CartContext);
+
   console.log(cart);
 
   //add to cart
@@ -19,9 +20,10 @@ export const Products = () => {
     const filter = product.filter((item) => {
       return ele.id === item.id;
     });
-    console.log(filter);
+
     setCart([...cart, filter]);
-    console.log(cart);
+    props.showAlert("Added to cart", "success");
+    console.log(props.showAlert);
   };
 
   //search bar . searching while user types in search bar.
@@ -97,19 +99,19 @@ export const Products = () => {
           <thead>
             <tr>
               <th>
-                <h3>Id </h3>{" "}
+                <h6>Id </h6>
               </th>
               <th>
-                <h3>Title</h3>
+                <h6>Title</h6>
               </th>
               <th>
-                <h3>Image</h3>
+                <h6>Image</h6>
               </th>
               <th>
-                <h3>Price</h3>
+                <h6>Price</h6>
               </th>
               <th>
-                <h3>Cart</h3>{" "}
+                <h6>Cart</h6>
               </th>
             </tr>
           </thead>
@@ -118,9 +120,7 @@ export const Products = () => {
               <tbody key={ele.id}>
                 <tr>
                   <td> {ele.id}</td>
-                  <td>
-                    <h4> {ele.title}</h4>
-                  </td>
+                  <td className="itemTitle">{ele.title}</td>
                   <td>
                     {" "}
                     <img src={ele.image} alt="pic not found" width="100px" />
