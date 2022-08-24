@@ -35,13 +35,6 @@ export const Profile = () => {
       </button>
       <br />
 
-      <button
-        className="filterButton primary-button"
-        onClick={() => navigate("mywallet")}
-      >
-        My Wallet
-      </button>
-      <br />
 
       <button
         className="filterButton primary-button"
@@ -76,3 +69,4 @@ export const Profile = () => {
     </>
   );
 };
+
