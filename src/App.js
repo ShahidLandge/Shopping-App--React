@@ -10,12 +10,15 @@ import { Login } from "./Component/Pages/Login";
 import { Signup } from "./Component/Pages/Signup";
 import { AuthContext } from "./AuthContext";
 import { RequireLogin } from "./Component/Pages/RequireLogin";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import React from "react";
 import Cart from "./Component/Pages/Cart";
 import { CartContext, CartProvider } from "./Component/Pages/CartContext";
+import Alert from "./Component/Pages/Alert";
 
 function App() {
+  const [alert, setAlert] = useState(null);
+
   useEffect(() => {
     localStorage.setItem("users", JSON.stringify([]));
     return () => {
@@ -23,11 +26,23 @@ function App() {
     };
   }, []);
 
+  const showAlert = (message, type) => {
+    setAlert({
+      msg: message,
+      type: type,
+    });
+
+    setTimeout(() => {
+      setAlert(null);
+    }, 800);
+  };
+
   return (
     <AuthContext>
       <div className="App">
         <CartProvider>
           <Header />
+          <Alert alert={alert} />
           <Routes>
             <Route path="/" element={<Home />} />
 
@@ -35,7 +50,7 @@ function App() {
               path="/products"
               element={
                 <RequireLogin>
-                  <Products />
+                  <Products showAlert={showAlert} />
                 </RequireLogin>
               }
             />
