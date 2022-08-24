@@ -13,6 +13,7 @@ import { RequireLogin } from "./Component/Pages/RequireLogin";
 import { useEffect } from "react";
 import React from "react";
 import Cart from "./Component/Pages/Cart";
+import { CartContext, CartProvider } from "./Component/Pages/CartContext";
 
 function App() {
   useEffect(() => {
@@ -25,49 +26,49 @@ function App() {
   return (
     <AuthContext>
       <div className="App">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Home />} />
+        <CartProvider>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
 
-          <Route
-            path="/products"
-            element={
-              <RequireLogin>
-                <Products />
-              </RequireLogin>
-            }
-          />
+            <Route
+              path="/products"
+              element={
+                <RequireLogin>
+                  <Products />
+                </RequireLogin>
+              }
+            />
+            <Route
+              path="/cart"
+              element={
+                <RequireLogin>
+                  <Cart />
+                </RequireLogin>
+              }
+            />
 
-          <Route
-            path="/profile"
-            element={
-              <RequireLogin>
-                <Profile />
-              </RequireLogin>
-            }
-          >
-            <Route path="myaddress" element={<h3>My Address Data</h3>} />
-            <Route path="myorders" element={<MyOrders />} />
-            <Route path="mywallet" element={<h3>My Wallet Data</h3>} />
-          </Route>
+            <Route
+              path="/profile"
+              element={
+                <RequireLogin>
+                  <Profile />
+                </RequireLogin>
+              }
+            >
+              <Route path="myaddress" element={<h3>My Address Data</h3>} />
+              <Route path="myorders" element={<MyOrders />} />
+              <Route path="mywallet" element={<h3>My Wallet Data</h3>} />
+            </Route>
 
-          <Route
-            path="/cart"
-            element={
-              <RequireLogin>
-                <Cart />
-              </RequireLogin>
-            }
-          />
-
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
-          <Route path="*" element={<div>Page not found</div>} />
-        </Routes>
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="*" element={<div>Page not found</div>} />
+          </Routes>
+        </CartProvider>
       </div>
     </AuthContext>
   );
 }
 
 export default App;
-
