@@ -45,6 +45,7 @@ export const Login = () => {
 
   return (
     <>
+    <br/>
       <h2  className="heading">Login or Sign up</h2>
       <form className="form" onSubmit={handleSubmit}>
         <br />
