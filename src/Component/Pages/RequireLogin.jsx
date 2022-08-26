@@ -7,7 +7,7 @@ export const RequireLogin = ({children}) => {
   console.log(location);
 const loggedInUser = useContext(UserContext)
 console.log(loggedInUser)
-  if(!loggedInUser.user.username){
+  if(!loggedInUser.user.email){
     return <Navigate to='/login' state={{previousPath: location.pathname}}/>
   } else{
     return children
