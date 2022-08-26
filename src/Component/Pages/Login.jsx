@@ -8,8 +8,8 @@ export const Login = () => {
   const [usernotfound, setUserNotFound] = useState(false);
   const [passwordNotMatch, setpasswordNotMatch] = useState(false);
   const location = useLocation();
-  const [userInfo, setUserName] = useState({
-    username: "",
+  const [userInfo, setUserInfo] = useState({
+    email: "",
     password: "",
   });
 
@@ -18,7 +18,7 @@ export const Login = () => {
     const userList = JSON.parse(localStorage.getItem("users"));
     console.log(userList);
     const userfromStorage = userList.find((user) => {
-      return user.firstname === userInfo.username;
+      return user.email === userInfo.email;
     });
     // let path;
     // if(location.state.previousPath){
@@ -45,18 +45,17 @@ export const Login = () => {
 
   return (
     <>
-    <br/>
-      <h2  className="heading">Login or Sign up</h2>
+      <h2  className="formHeader">Login or Sign up</h2>
       <form className="form" onSubmit={handleSubmit}>
         <br />
         <br />
         <div>
           <input
-            id="username"
+            id="email"
             type="text"
-            placeholder="Username"
+            placeholder="Email Id"
             onChange={(e) =>
-              setUserName({ ...userInfo, username: e.target.value })
+              setUserInfo({ ...userInfo, email: e.target.value })
             }
           />
         </div>
@@ -67,7 +66,7 @@ export const Login = () => {
             type="text"
             placeholder="Password"
             onChange={(e) =>
-              setUserName({ ...userInfo, password: e.target.value })
+              setUserInfo({ ...userInfo, password: e.target.value })
             }
           />
         </div>
@@ -96,5 +95,3 @@ export const Login = () => {
     </>
   );
 };
-
-
