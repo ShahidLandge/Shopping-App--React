@@ -9,7 +9,7 @@ export const Login = () => {
   const [passwordNotMatch, setpasswordNotMatch] = useState(false);
   const location = useLocation();
   const [userInfo, setUserInfo] = useState({
-    email: "",
+    username: "",
     password: "",
   });
 
@@ -18,7 +18,7 @@ export const Login = () => {
     const userList = JSON.parse(localStorage.getItem("users"));
     console.log(userList);
     const userfromStorage = userList.find((user) => {
-      return user.email === userInfo.email;
+      return user.username === userInfo.username;
     });
     // let path;
     // if(location.state.previousPath){
@@ -51,11 +51,11 @@ export const Login = () => {
         <br />
         <div>
           <input
-            id="email"
+            id="username"
             type="text"
-            placeholder="Email Id"
+            placeholder="Username"
             onChange={(e) =>
-              setUserInfo({ ...userInfo, email: e.target.value })
+              setUserInfo({ ...userInfo, username: e.target.value })
             }
           />
         </div>
