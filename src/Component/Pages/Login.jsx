@@ -8,7 +8,7 @@ export const Login = () => {
   const [usernotfound, setUserNotFound] = useState(false);
   const [passwordNotMatch, setpasswordNotMatch] = useState(false);
   const location = useLocation();
-  const [userInfo, setUserInfo] = useState({
+  const [userInfo, setUserName] = useState({
     username: "",
     password: "",
   });
@@ -18,7 +18,7 @@ export const Login = () => {
     const userList = JSON.parse(localStorage.getItem("users"));
     console.log(userList);
     const userfromStorage = userList.find((user) => {
-      return user.username === userInfo.username;
+      return user.firstname === userInfo.username;
     });
     // let path;
     // if(location.state.previousPath){
@@ -55,7 +55,7 @@ export const Login = () => {
             type="text"
             placeholder="Username"
             onChange={(e) =>
-              setUserInfo({ ...userInfo, username: e.target.value })
+              setUserName({ ...userInfo, username: e.target.value })
             }
           />
         </div>
@@ -66,7 +66,7 @@ export const Login = () => {
             type="text"
             placeholder="Password"
             onChange={(e) =>
-              setUserInfo({ ...userInfo, password: e.target.value })
+              setUserName({ ...userInfo, password: e.target.value })
             }
           />
         </div>
