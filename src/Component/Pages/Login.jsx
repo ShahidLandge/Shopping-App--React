@@ -53,7 +53,7 @@ export const Login = () => {
           <input
             id="username"
             type="text"
-            placeholder="Username"
+            placeholder="First Name"
             onChange={(e) =>
               setUserName({ ...userInfo, username: e.target.value })
             }
