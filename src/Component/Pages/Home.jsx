@@ -23,8 +23,9 @@ export const Home = () => {
               Login
             </button>
           )}
-
-          {!loggedInUser.user.username && (
+           
+           {/* After signup hide signup button , password is common in both login and signup. */}
+          {!loggedInUser.user.password && (
             <button
               className="btn primary-button"
               onClick={() => navigate("/signup")}
