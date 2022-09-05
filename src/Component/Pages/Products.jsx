@@ -49,7 +49,7 @@ export const Products = (props) => {
 
   useEffect(() => {
     setLoading(true);
-    fetch("https://fakestoreapi.com/products")
+    fetch("https://hosting-myapi.herokuapp.com/api/products")
       .then((response) => response.json())
       .then((data) => {
         return setLoading(false), console.log(data), setproduct(data);
