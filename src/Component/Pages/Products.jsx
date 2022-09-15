@@ -4,7 +4,7 @@ import { Loader } from "../Loader/Loader";
 import { CartContext } from "./CartContext";
 
 export const Products = (props) => {
-  // 1. Make an api call to the url: "https://fakestoreapi.com/products" to fetch a list of products
+  // 1. Make an api call to the url: "https://hosting-myapi.herokuapp.com/api/products" to fetch a list of products
   // 2. Render the products (name,image and price)
 
   let [product, setproduct] = useState([]);
