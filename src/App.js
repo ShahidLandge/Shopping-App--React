@@ -49,9 +49,9 @@ function App() {
             <Route
               path="/products"
               element={
-                <RequireLogin>
+               
                   <Products showAlert={showAlert} />
-                </RequireLogin>
+             
               }
             />
             <Route
