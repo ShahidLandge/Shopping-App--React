@@ -43,7 +43,7 @@
 a {
   margin-right: 1rem;
   text-decoration: none;
-  color: gray;
+  color: #46f584;
 }
 a.active {
   font-weight: bold;
@@ -51,7 +51,7 @@ a.active {
 }
 
 .header {
-  background: #0e0f11;
+  background: #174e64;
   width: 100%;
   /* navbar fixed to top when scrolled 
   position: sticky;
