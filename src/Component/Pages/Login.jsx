@@ -83,13 +83,13 @@ export const Login = () => {
       <br />
       {usernotfound && (
         <>
-          <h3>You are not an existing user. please signup first</h3>
+          <h3>You are not an existing user. Please signup first</h3>
           <br />
         </>
       )}
       {passwordNotMatch && (
         <>
-          <h3>Your password is incorrect, please try again</h3>
+          <h3>Your Password is incorrect. Please try again</h3>
         </>
       )}
     </>
