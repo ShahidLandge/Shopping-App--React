@@ -24,7 +24,7 @@
 }
 .btn {
   padding: 0.5rem 1rem;
-  background-color: cyan;
+  /* background-color: cyan; */
   box-shadow: 0.2rem 0.2rem #d3d3d3;
   border: none;
   border-radius: 0.35rem;
@@ -43,7 +43,7 @@
 a {
   margin-right: 1rem;
   text-decoration: none;
-  color: gray;
+  color: #46f584;
 }
 a.active {
   font-weight: bold;
@@ -51,8 +51,11 @@ a.active {
 }
 
 .header {
-  background: #0e0f11;
-  width: 100%;
+  background: #174e64;
+  width: 100%; 
+  box-shadow: 0 0 2px black;
+
+  /* box-shadow: 0.5rem 0.5rem 0 0  #d3d3d3; */
   /* navbar fixed to top when scrolled 
   position: sticky;
   top: 0px; */
@@ -85,11 +88,16 @@ button {
   padding: 0.5rem 1rem;
   border: 1px solid #d3d3d3;
   margin: 0.5rem;
-  font-size: large;
+  /* font-size: large; */
   border-radius: 0.125rem;
 }
 button {
   cursor: pointer;
+ 
+ 
+}
+.btn-warning {
+  font-size: 1.2rem;
 }
 button:active {
   background-color: yellow;
@@ -106,7 +114,7 @@ input:focus {
 
 /* for giving same width to all the buttons */
 .primary-button {
-  width: 150px;
+  width: 120px;
   display: inline-block;
 }
 

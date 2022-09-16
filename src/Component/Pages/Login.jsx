@@ -20,7 +20,13 @@ export const Login = () => {
     const userfromStorage = userList.find((user) => {
       return user.firstname === userInfo.username;
     });
-  
+    // let path;
+    // if(location.state.previousPath){
+    //     path = location.state.previousPath
+    // } else{
+    //     path = '/'
+    // }
+    // console.log(loggedInuser.user)
     console.log(userfromStorage);
     if (userfromStorage) {
       if (userfromStorage.password === userInfo.password) {
@@ -28,7 +34,7 @@ export const Login = () => {
         // console.log(loggedInuser.user.userInfo)
         console.log(location);
         navigate(location.state?.previousPath || "/");
-      
+        // navigate(path)
       } else {
         setpasswordNotMatch(true);
       }

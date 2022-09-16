@@ -47,6 +47,9 @@ export const Signup = () => {
   };
 
   const emailValidator = () => {
+    // should not be empty
+    // min lemgth
+    // should have @ symbol ---> searching
 
     if (signUpValidation.email === "") {
       setSignupValidationError({
@@ -133,7 +136,7 @@ export const Signup = () => {
     <>
       <h2 className="formHeader">Sign up</h2>
       <br />
-      <br />
+      
 
       <form className="form" onSubmit={submitHandler}>
         <div>
