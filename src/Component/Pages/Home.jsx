@@ -17,7 +17,7 @@ export const Home = () => {
             </h3>
           ) : (
             <button
-              className="btn primary-button"
+              className="btn btn-warning primary-button"
               onClick={() => navigate("/login")}
             >
               Login
@@ -27,7 +27,7 @@ export const Home = () => {
            {/* After signup hide signup button , password is common in both login and signup. */}
           {!loggedInUser.user.password && (
             <button
-              className="btn primary-button"
+              className="btn btn-warning primary-button"
               onClick={() => navigate("/signup")}
             >
               Sign up
