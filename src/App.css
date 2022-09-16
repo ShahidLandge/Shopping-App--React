@@ -7,7 +7,6 @@
   padding: 0;
 }
 
-<<<<<<< HEAD
 /* css for background image */
 .bg {
   /* Set up proportionate scaling */
@@ -31,16 +30,12 @@
   border-radius: 0.35rem;
   cursor: pointer;
   margin-bottom: 1rem;
+  margin-right: 0.5rem;
 }
 
 /* css for navbar */
 .nav {
   /* margin-bottom: 1rem; */
-=======
-/*css for header or a navbar*/
-.nav {
-  margin-bottom: 1rem;
->>>>>>> 2a63db37310a5112ac97ddb778f13c5a7a58cc81
   display: flex;
   flex-direction: row;
   padding: 1rem;
@@ -56,8 +51,15 @@ a.active {
 }
 
 .header {
-  background: #282c34;
+  background: #0e0f11;
   width: 100%;
+  /* navbar fixed to top when scrolled 
+  position: sticky;
+  top: 0px; */
+}
+.alert {
+  position: sticky;
+  top: 0px;
 }
 .white {
   color: #fff;
@@ -90,46 +92,24 @@ button {
   cursor: pointer;
 }
 button:active {
-  background-color: #d3d3d3;
+  background-color: yellow;
 }
 input:focus {
   outline: none;
   box-shadow: 0 0 1rem 0.2rem #d3d3d3;
   background: #fff;
 }
-<<<<<<< HEAD
 
 .navBtn {
   border: none;
 }
-.primary-button {
-  width: 150px;
-  display: inline-block;
-}
-/* table,th,td{
-  border:1px solid black;
 
-}
-th,td{
-  padding:15px;
- 
-}
-table{
-  margin: auto;
-  width: 80%;
-} */
-=======
-
-.navBtn {
-  border: none;
-}
+/* for giving same width to all the buttons */
 .primary-button {
   width: 150px;
   display: inline-block;
 }
 
-/*css for table */
->>>>>>> 2a63db37310a5112ac97ddb778f13c5a7a58cc81
 table {
   border: 1px solid #ccc;
   border-collapse: collapse;
@@ -164,15 +144,18 @@ th {
   flex-direction: column;
   align-items: center;
 }
-<<<<<<< HEAD
 .formHeader {
   margin-top: 1rem;
 }
 
+/* css for cart */
+.cartButton {
+  display: flex;
+  justify-content: end;
+}
+
 @media screen and (max-width: 1200px) {
   .bg {
-    /* width: 100%;
-  height: 100vh; */
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
     background-attachment: fixed;
@@ -183,25 +166,13 @@ th {
   }
 }
 @media screen and (max-width: 500px) {
-  td,
-  th {
-    font-size: 0.6rem;
-  }
-=======
-
-@media screen and (max-width: 500px) {
-  td,
-  th {
-    font-size: 0.6rem;
-  }
->>>>>>> 2a63db37310a5112ac97ddb778f13c5a7a58cc81
   img {
     width: 60px;
   }
   .btnCart {
-    font-size: 0.5rem;
-    width: 40px;
-    height: 40px;
+    font-size: 0.6rem;
+    width: 3rem;
+    height: 3rem;
     padding: 0.625em;
     background-color: #61dafb;
   }
@@ -211,14 +182,11 @@ th {
     height: 70px;
     padding: 0.625em;
   }
-<<<<<<< HEAD
   .btn {
     font-size: 0.6rem;
     width: 60px;
   }
+  .itemTitle {
+    font-size: 0.8rem;
+  }
 }
-=======
-}
-
-  
->>>>>>> 2a63db37310a5112ac97ddb778f13c5a7a58cc81

@@ -12,8 +12,8 @@ export const Profile = () => {
   return (
     <>
       <br />
-      <h3>Name: {loggedInUser.user.username}</h3>
-      <br />
+      <h5>Name: {loggedInUser.user.username}</h5>
+      
 
       {/*   
     <Link to='myaddress'>My Address</Link>
@@ -35,13 +35,6 @@ export const Profile = () => {
       </button>
       <br />
 
-      <button
-        className="filterButton primary-button"
-        onClick={() => navigate("mywallet")}
-      >
-        My Wallet
-      </button>
-      <br />
 
       <button
         className="filterButton primary-button"

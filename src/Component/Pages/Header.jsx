@@ -4,14 +4,12 @@ import { UserContext } from "../../AuthContext";
 
 export const Header = () => {
   const loggedInUser = useContext(UserContext);
-  // const isloggedIn = loggedInUser.user.username ? true : false
   return (
     <>
       <header className="header">
         <ul className="nav">
           <li>
-            {/* <a href="/">Home</a> */}
-            {/* <Link to='/'>Home</Link> */}
+        
             <NavLink to="/">Home</NavLink>
           </li>
           <li>
@@ -36,3 +34,9 @@ export const Header = () => {
     </>
   );
 };
+
+
+
+
+
+

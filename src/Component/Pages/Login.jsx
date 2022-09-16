@@ -20,13 +20,7 @@ export const Login = () => {
     const userfromStorage = userList.find((user) => {
       return user.firstname === userInfo.username;
     });
-    // let path;
-    // if(location.state.previousPath){
-    //     path = location.state.previousPath
-    // } else{
-    //     path = '/'
-    // }
-    // console.log(loggedInuser.user)
+  
     console.log(userfromStorage);
     if (userfromStorage) {
       if (userfromStorage.password === userInfo.password) {
@@ -34,7 +28,7 @@ export const Login = () => {
         // console.log(loggedInuser.user.userInfo)
         console.log(location);
         navigate(location.state?.previousPath || "/");
-        // navigate(path)
+      
       } else {
         setpasswordNotMatch(true);
       }
@@ -45,11 +39,7 @@ export const Login = () => {
 
   return (
     <>
-<<<<<<< HEAD
       <h2  className="formHeader">Login or Sign up</h2>
-=======
-      <h2>Login or Sign up</h2>
->>>>>>> 2a63db37310a5112ac97ddb778f13c5a7a58cc81
       <form className="form" onSubmit={handleSubmit}>
         <br />
         <br />
@@ -57,7 +47,7 @@ export const Login = () => {
           <input
             id="username"
             type="text"
-            placeholder="Username"
+            placeholder="First Name"
             onChange={(e) =>
               setUserName({ ...userInfo, username: e.target.value })
             }
@@ -99,4 +89,3 @@ export const Login = () => {
     </>
   );
 };
-
