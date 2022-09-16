@@ -24,7 +24,7 @@
 }
 .btn {
   padding: 0.5rem 1rem;
-  background-color: cyan;
+  /* background-color: cyan; */
   box-shadow: 0.2rem 0.2rem #d3d3d3;
   border: none;
   border-radius: 0.35rem;
@@ -106,7 +106,7 @@ input:focus {
 
 /* for giving same width to all the buttons */
 .primary-button {
-  width: 150px;
+  width: 120px;
   display: inline-block;
 }
 
