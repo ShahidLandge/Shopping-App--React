@@ -52,7 +52,10 @@ a.active {
 
 .header {
   background: #174e64;
-  width: 100%;
+  width: 100%; 
+  box-shadow: 0 0 2px black;
+
+  /* box-shadow: 0.5rem 0.5rem 0 0  #d3d3d3; */
   /* navbar fixed to top when scrolled 
   position: sticky;
   top: 0px; */
@@ -85,11 +88,16 @@ button {
   padding: 0.5rem 1rem;
   border: 1px solid #d3d3d3;
   margin: 0.5rem;
-  font-size: large;
+  /* font-size: large; */
   border-radius: 0.125rem;
 }
 button {
   cursor: pointer;
+ 
+ 
+}
+.btn-warning {
+  font-size: 1.2rem;
 }
 button:active {
   background-color: yellow;
