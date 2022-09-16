@@ -48,11 +48,7 @@ function App() {
 
             <Route
               path="/products"
-              element={
-              
-                  <Products showAlert={showAlert} />
-              
-              }
+              element={<Products showAlert={showAlert} />}
             />
             <Route
               path="/cart"

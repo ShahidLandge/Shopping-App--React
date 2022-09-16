@@ -134,7 +134,7 @@ export const Signup = () => {
 
   return (
     <>
-      <h2 className="formHeader">Sign up</h2>
+      <h2 className="heading">Sign up</h2>
       <br />
       
 

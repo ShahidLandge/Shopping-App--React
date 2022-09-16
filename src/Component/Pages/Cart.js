@@ -17,13 +17,6 @@ export const Cart = () => {
     setCart(filter);
   };
 
-  // const handleDelete= (ele,index)=>{
-  //   const item = cart.find((c)=>c[0].id === ele[0].id);
-  //   console.log(item);
-  //   const idx = cart.indexOf(item);
-  //   cart.splice(idx,1)
-  // }
-
   //Total amount in the cart
   const totalPrice = cart.reduce((acc, curr) => {
     // console.log(curr[0])

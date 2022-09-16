@@ -1,7 +1,5 @@
-import React from 'react'
+import React from "react";
 
 export const MyOrders = () => {
-  return (
-    <h3>My Orders Data </h3>
-  )
-}
+  return <h3>My Orders Data</h3>;
+};
