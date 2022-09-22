@@ -185,6 +185,7 @@ export const Products = (props) => {
   return (
     <>
       <div>
+        <br/>
       <h2>Buy Now</h2>
         <div className="container my-2 py-5">
           <div className="row justify-content-center">
