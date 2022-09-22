@@ -63,6 +63,7 @@ a.active {
 .alert {
   position: sticky;
   top: 0px;
+  z-index: 1;
 }
 .white {
   color: #fff;
@@ -85,7 +86,7 @@ label {
 }
 input,
 button {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   border: 1px solid #d3d3d3;
   margin: 0.5rem;
   /* font-size: large; */
@@ -110,6 +111,15 @@ input:focus {
 
 .navBtn {
   border: none;
+}
+
+/* css for cards */
+.card {
+  transition: all 0.5s ease;
+}
+.card:hover {
+  transform: scale(1);
+  box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* for giving same width to all the buttons */

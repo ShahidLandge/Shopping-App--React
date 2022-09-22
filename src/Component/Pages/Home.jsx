@@ -12,7 +12,7 @@ export const Home = () => {
         <div className="homeBtns">
           <br />
           {loggedInUser.user.username ? (
-            <h3 className="btn primary-button">
+            <h3 className="btn btn-primary">
               Hello {loggedInUser.user.username} Enjoy Shopping
             </h3>
           ) : (

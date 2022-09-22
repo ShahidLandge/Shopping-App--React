@@ -94,7 +94,9 @@ export const Products = (props) => {
     fetch("https://fakestoreapi.com/products")
       .then((response) => response.json())
       .then((data) => {
-        return setLoading(false), console.log(data), setproduct(data);
+        return (
+          setLoading(false) , console.log(data) ,setproduct(data)
+          )
       })
       .catch((e) => {
         setLoading(false);
@@ -112,11 +114,12 @@ export const Products = (props) => {
     setproduct(filter);
   }
 
-  return (
-    <div>
+  const ShowProducts = () => {
+    return (
+      <>
+     
       <br />
-      <h2>Buy Now</h2>
-      <br />
+       <div className="buttons d-flex justify-content-center mb-5 pb-5 flex-wrap">
       <DebounceInput
       minLength={4}
         placeholder="Search Product"
@@ -132,65 +135,63 @@ export const Products = (props) => {
       <button className="filterButton" onClick={() => highToLow()}>
         High-to-Low Price{" "}
       </button>
+      </div>
       <br />
-      <br />
-      <br />
+    
+       {product.map((ele) => {
+          return (
+            <div className="col-md-3 my-3" key={ele.id}>
+              <div className="card h-100 text-center p-4">
 
-      {loading ? (
-        <Loader />
-      ) : (
-        <table>
-          <thead>
-            <tr>
-              <th>
-                <h6>Id </h6>
-              </th>
-              <th>
-                <h6>Title</h6>
-              </th>
-              <th>
-                <h6>Image</h6>
-              </th>
-              <th>
-                <h6>Price</h6>
-              </th>
-              <th>
-                <h6>Cart</h6>
-              </th>
-            </tr>
-          </thead>
-          {product.map((ele) => {
-            return (
-              <tbody key={ele.id}>
-                <tr>
-                  <td> {ele.id}</td>
-                  <td className="itemTitle">{ele.title}</td>
-                  <td>
-                    {" "}
-                    <img src={ele.image} alt="pic not found" width="100px" />
-                  </td>
-                  <td> $ {ele.price}</td>
-                  <td>
+                  <img
+                    src={ele.image}
+                    alt="pic not found"
+                    height="200px"
+                    className="card-img-top"
+                  />{" "}
+               
+                <div className="card-body d-flex justify-content-between flex-column">
+                 <div>
+                  <h5 className="card-title mb-0">{ele.title} </h5>
+                  </div>
+                  <br/>
+                  <div>
+                  <p className="card-text lead fw-bold">${ele.price}</p>
                   {loggedInUser.user.username ?
                     <button
-                      className="filterButton btnCart"
+                      className="filterButton"
                       onClick={() => addToCart(ele)}
                     >
                       Add to Cart
                     </button> :   <button
-                      className="filterButton btnCart"
+                      className="filterButton"
                       onClick={() =>navigate('/login')}
                     >
                       Add to Cart
                     </button>
-          }
-                  </td>
-                </tr>
-              </tbody>
-            );
-          })}
-        </table>
-      )}
-    </div>
+                    }
+                    </div>
+                </div>
+                </div>
+              </div>
+            
+          );
+        })}
+    </>
+    );
+  };
+
+
+  return (
+    <>
+      <div>
+      <h2>Buy Now</h2>
+        <div className="container my-2 py-5">
+          <div className="row justify-content-center">
+            {loading ? <Loader /> : <ShowProducts />}
+          </div>
+        </div>
+      </div>
+    </>
   );
-};
+  }

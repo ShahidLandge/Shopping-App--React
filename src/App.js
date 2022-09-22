@@ -13,7 +13,7 @@ import { RequireLogin } from "./Component/Pages/RequireLogin";
 import { useEffect, useState } from "react";
 import React from "react";
 import Cart from "./Component/Pages/Cart";
-import { CartContext, CartProvider } from "./Component/Pages/CartContext";
+import { CartProvider } from "./Component/Pages/CartContext";
 import Alert from "./Component/Pages/Alert";
 
 function App() {
