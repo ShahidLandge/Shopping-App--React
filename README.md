@@ -1,7 +1,7 @@
-##	Project Name - User Authenticated Shopping Website Using React
+##	Project Name - Shopping Website with login/signup functionality using React
 
 ##	Project Description :
-It is a simple user authenticated shopping application where user can navigate to different pages without reloading the entire website.
+It is a single page application where user can navigate to different pages without reloading the entire website.
 
 ## Why this project was chosen (what use case does it solve) ?
 It helps to understand the  basic concept of react-router and context API.
