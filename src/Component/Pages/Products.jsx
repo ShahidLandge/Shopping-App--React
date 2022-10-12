@@ -6,8 +6,7 @@ import  {DebounceInput} from  "react-debounce-input"
 import { UserContext } from "../../AuthContext";
 
 export const Products = (props) => {
-  // 1. Make an api call to the url: "https://fakestoreapi.com/products" to fetch a list of products
-  // 2. Render the products (name,image and price)
+
 
   let [product, setproduct] = useState([]);
   const [inputchange, setinputChange] = useState("");
@@ -119,22 +118,26 @@ export const Products = (props) => {
       <>
      
       <br />
-       <div className="buttons d-flex justify-content-center mb-5 pb-5 flex-wrap">
+       <div className="buttons d-flex justify-content-center  mb-5 pb-5 flex-wrap">
+        <div>
       <DebounceInput
       minLength={4}
         placeholder="Search Product"
         debounceTimeout={1000}
         onChange={(e) => handleChange(e.target.value)}
       />
-      <button className="filterButton" onClick={() => searchProduct()}>
+      </div>
+      <div className="d-flex justify-content-center align-items-center ">
+      <button className="filterButton d-flex " onClick={() => searchProduct()}>
         Search
       </button>
-      <button className="filterButton" onClick={() => lowToHigh()}>
+      <button className="filterButton d-flex " onClick={() => lowToHigh()}>
         Low-to-High Price{" "}
       </button>
-      <button className="filterButton" onClick={() => highToLow()}>
+      <button className="filterButton d-flex " onClick={() => highToLow()}>
         High-to-Low Price{" "}
       </button>
+      </div>
       </div>
       <br />
     
