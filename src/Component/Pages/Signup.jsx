@@ -26,7 +26,8 @@ export const Signup = () => {
 
   const [signUpValidationerror, setSignupValidationError] =
     useState(initialErrorValue);
-
+ 
+  // Username Validator
   const userNameValidator = () => {
     if (signUpValidation.firstname === "") {
       setSignupValidationError({
@@ -46,11 +47,9 @@ export const Signup = () => {
     }
   };
 
+  //Email Validator
   const emailValidator = () => {
-    // should not be empty
-    // min lemgth
-    // should have @ symbol ---> searching
-
+    
     if (signUpValidation.email === "") {
       setSignupValidationError({
         ...signUpValidationerror,
@@ -75,7 +74,8 @@ export const Signup = () => {
     }
   };
 
-  //password validator
+  //Password Validator
+  
   const passwordValidator = () => {
     if (signUpValidation.password === "") {
       setSignupValidationError({
@@ -94,7 +94,9 @@ export const Signup = () => {
       return true;
     }
   };
-  //confirm password validator
+  
+  //Confirm Password Validator
+  
   const confirmPasswordValidator = () => {
     if (signUpValidation.confirmPassword !== signUpValidation.password) {
       setSignupValidationError({
@@ -109,6 +111,7 @@ export const Signup = () => {
   };
 
   //Form submitting
+  
   const submitHandler = (e) => {
     e.preventDefault();
 
